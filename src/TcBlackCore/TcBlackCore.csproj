@@ -22,8 +22,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>..\TcBlack.ruleset</CodeAnalysisRuleSet>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -36,10 +36,8 @@
     <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>TcBlackCoreSign.pfx</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>../Key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>TcBlack_icon.ico</ApplicationIcon>
@@ -68,9 +66,6 @@
     <Compile Include="VariableBlockEnd.cs" />
     <Compile Include="VariableBlockStart.cs" />
     <Compile Include="VariableDeclaration.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="TcBlackCoreSign.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TcBlack_icon.ico" />
